@@ -1,0 +1,11 @@
+[Desktop Action kfindhere]
+Exec=kfind %u
+Icon=kfind
+Name=Find Files/Folders
+
+[Desktop Entry]
+Actions=kfindhere;
+Icon=edit-find
+Type=Service
+X-KDE-Priority=TopLevel
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,inode/directory

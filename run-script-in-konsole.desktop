@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-shellscript
+Icon=utilities-terminal
+Actions=run-script-in-konsole
+X-KDE-Priority=TopLevel
+
+[Desktop Action run-script-in-konsole]
+Name=Open in Terminal
+Name[bg]=Отваряне в Терминал
+Icon=utilities-terminal
+Exec=konsole --workdir %d -e bash %n

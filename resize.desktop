@@ -1,0 +1,13 @@
+[Desktop Entry]
+Actions=Resize
+Icon=transform-crop-and-resize
+MimeType=image/*
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=Image
+
+[Desktop Action Resize]
+Exec=~/.local/share/kservices5/ServiceMenus/resize.sh %D %U
+Icon=transform-scale
+Name=Resize Image(s)

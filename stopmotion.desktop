@@ -1,0 +1,12 @@
+[Desktop Action Resize]
+Exec=~/.local/share/kservices5/ServiceMenus/stopmotion.sh %U
+Icon=darktable
+Name=Create Stopmotion Video
+
+[Desktop Entry]
+Actions=Resize
+Icon=darktable
+MimeType=image/*
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel

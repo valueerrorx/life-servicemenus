@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+Icon=konsole
+Actions=openterminal
+X-KDE-Priority=TopLevel
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory,inode/directory-locked
+
+[Desktop Action openterminal]
+Exec=/usr/bin/konsole --workdir %U
+Icon=konsole
+Name=Open Terminal Here

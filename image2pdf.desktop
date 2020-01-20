@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Service
+Actions=image2pdf;images2singlepdf
+Icon=application-pdf
+Encoding=UTF-8
+TryExec=convert
+Version=0.9
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/*
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=Convert to
+
+[Desktop Action image2pdf]
+Exec=count=0; for f in %F; do convert "$f" "${f%.*}.pdf"; count=`expr $count + 1`; done; kdialog --title "image2pdf" --passivepopup "$count image(s) to pdfs converted!";
+Icon=application-pdf
+#Exec=convert %F %f.pdf
+Name=Convert image(s) to separate pdf
+
+
+[Desktop Action images2singlepdf]
+Exec=a="'%F'"; namewithoutext="${a%.*}"; namewithextpdf="$namewithoutext.pdf"; count=0; for f in %F; do fdir=$(dirname "$f"); count=`expr $count + 1`; done; cd "$fdir"; newname=$(kdialog --getsavefilename "$namewithextpdf" "*.pdf |PDF files"); if [ $? -eq 0 ]; then convert %F "$newname"; kdialog --title "image2pdf" --passivepopup "$count image(s) into single pdf '$newname' converted!"; else echo "Aborted"; fi;
+Icon=application-pdf
+#Exec=convert %F %f.pdf
+Name=Convert image(s) into single pdf

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Actions=mountiso
+Icon=media-optical
+MimeType=application/*
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action mountiso]
+Exec=mntDir=`kdialog --getexistingdirectory ~/`; pkxexec "mount -o loop %u $mntDir"; dolphin $mntDir;
+Icon=media-optical
+Name=Mount iso
+Name[it]=Monta immagine
+Name[en]=Mount iso
